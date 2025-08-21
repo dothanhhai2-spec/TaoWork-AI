@@ -1,0 +1,6 @@
+Tip: To serve storage files, add this to app.main:
+
+from fastapi.staticfiles import StaticFiles
+app.mount('/storage', StaticFiles(directory='storage'), name='storage')
+
+Then joins like f"{BASE_URL}/storage/..." will be downloadable.
